@@ -3,8 +3,16 @@ clear all; close all; clc;
 %% Script to import and QC noisy acoustic snow depth data
  
 % Data to QC
-filein   = 'G:\ncar\d1\data\Point_Snow_Sites\Raw\SNQ_Hist\New_Snow.mat';
+% New Snow is in column 17. 
+filein   = 'G:\ncar\d1\data\Point_Snow_Sites\Raw\SNQ_Hist\QC_Data.mat';
 load(filein)
+
+% Deal with time step issue
+SD_24_acou = QC_Data(:,17);
+TIME_in    = QC_Data(:,1);
+dt_all = diff(TIME_in)*24; % hours
+
+[QC_Data_out, TIME_out] = Import_intermittent_time_data_to_continuous(TIME_in,QC_data);
 
 
 % Manual observations used to aid QC'ing of automatic

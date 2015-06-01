@@ -10,7 +10,7 @@ function SD_corr = correct_SD_for_speed_of_sound(SDin,Airtemp,TIME,smooth_flag)
 %   Coded into Matlab by Nic Wayand (nicway@gmail.com) June 20015
 % 
 % SYNTAX
-%   correct_SD_for_speed_of_sound(SDin,Airtemp)
+%   correct_SD_for_speed_of_sound(SDin,Airtemp,TIME,smooth_flag)
 % 
 % INPUTS
 % SDin          - Nx1 Raw measured snow depth (any length unit)
