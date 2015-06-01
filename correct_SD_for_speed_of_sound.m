@@ -23,7 +23,8 @@ function SD_corr = correct_SD_for_speed_of_sound(SDin,Airtemp,TIME,smooth_flag)
 % 
 % SCRIPTS REQUIRED
 %  fastsmooth - http://www.mathworks.com/matlabcentral/fileexchange/19998-fast-smoothing-function/content/fastsmooth.m
-%  get_dt     - 
+%  get_dt     - https://github.com/NicWayand/Time_managment
+%
 %% Code %%
 
 % Temperature correction (Campbell manual)
@@ -41,7 +42,8 @@ if smooth_flag
     dt_obs              = get_dt(TIME);
     SD_corr_sm          = nan(size(SD_corr));
     SD_corr_sm(~I_nan)  = fastsmooth(SD_corr_sm(~I_nan),24*1/dt_obs,1,1);
-    SD_corr             = obs_SD_sm
+    % Replace 
+    SD_corr             = SD_corr_sm;
 end
 
 % END
