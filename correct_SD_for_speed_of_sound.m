@@ -4,7 +4,7 @@ function SD_corr = correct_SD_for_speed_of_sound(SDin,Airtemp,TIME,smooth_flag)
 % insturment, that has been calibrated to report snow depths a 0 degrees C.
 % Optional argument to smooth noisy snow depth data
 %
-% Taken from Campbell Scientific SR50A manual  
+% Taken from Campbell Scientific SR50A manual or Judd Communications snow depth sensor manual (http://static1.1.sqspcdn.com/static/f/1146254/15414722/1322862508567/ds2manual.pdf?token=Ms9OyM0XgFH696IDFumUKMIm93Y%3D)
 %
 % RELEASE NOTES
 %   Coded into Matlab by Nic Wayand (nicway@gmail.com) June 20015
